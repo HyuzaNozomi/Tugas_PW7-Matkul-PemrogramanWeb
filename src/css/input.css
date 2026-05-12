@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+body { font-family: 'Inter', sans-serif; }
+
+#typewriter-text { font-weight: 800; }
+
+#typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.1em;
+    background: #374151;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.glass-card {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.glass-notif {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.input-field {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(209,213,219,0.55);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.input-field:focus {
+    background: rgba(255,255,255,0.95);
+    border-color: rgba(16,185,129,0.4);
+    box-shadow: 0 0 0 4px rgba(16,185,129,0.1), inset 0 1px 2px rgba(0,0,0,0.02);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+.card-decor {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
