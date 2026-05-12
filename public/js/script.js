@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
         resultDiv.innerHTML = `
             <div class="flex items-start">
                 <div class="flex-1 min-w-0">
-                    <p class="text-gray-800 font-semibold text-sm">Kehadiran Tersimpan</p>
+                    <p class="text-white/90 font-semibold text-sm">Kehadiran Tersimpan</p>
                     <div class="mt-1.5 space-y-0.5">
-                        <p class="text-gray-500 text-xs"><span class="text-gray-700">Nama:</span> ${escapeHtml(data.nama)}</p>
-                        <p class="text-gray-500 text-xs"><span class="text-gray-700">Status:</span> ${escapeHtml(data.status)}</p>
-                        <p class="text-gray-500 text-xs"><span class="text-gray-700">Pesan:</span> ${escapeHtml(data.pesan)}</p>
+                        <p class="text-teal-200/70 text-xs"><span class="text-white/80">Nama:</span> ${escapeHtml(data.nama)}</p>
+                        <p class="text-teal-200/70 text-xs"><span class="text-white/80">Status:</span> ${escapeHtml(data.status)}</p>
+                        <p class="text-teal-200/70 text-xs"><span class="text-white/80">Pesan:</span> ${escapeHtml(data.pesan)}</p>
                     </div>
                 </div>
-                <button onclick="this.closest('#resultArea').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 transition-colors ml-3 shrink-0">
+                <button onclick="this.closest('#resultArea').classList.add('hidden')" class="text-teal-300/50 hover:text-white/80 transition-colors ml-3 shrink-0">
                     <span class="text-lg leading-none">&times;</span>
                 </button>
             </div>
@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
         resultDiv.innerHTML = `
             <div class="flex items-start">
                 <div class="flex-1 min-w-0">
-                    <p class="text-gray-800 font-semibold text-sm">Error</p>
-                    <p class="text-gray-500 text-xs mt-1">${escapeHtml(message)}</p>
+                    <p class="text-white/90 font-semibold text-sm">Error</p>
+                    <p class="text-teal-200/70 text-xs mt-1">${escapeHtml(message)}</p>
                 </div>
-                <button onclick="this.closest('#resultArea').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 transition-colors ml-3 shrink-0">
+                <button onclick="this.closest('#resultArea').classList.add('hidden')" class="text-teal-300/50 hover:text-white/80 transition-colors ml-3 shrink-0">
                     <span class="text-lg leading-none">&times;</span>
                 </button>
             </div>
@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
         resultDiv.innerHTML = `
             <div class="flex items-start">
                 <div class="flex-1 min-w-0">
-                    <p class="text-gray-800 font-semibold text-sm">Validasi Gagal</p>
+                    <p class="text-white/90 font-semibold text-sm">Validasi Gagal</p>
                     <ul class="mt-1.5 space-y-0.5 list-disc list-inside">${errorList}</ul>
                 </div>
-                <button onclick="this.closest('#resultArea').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 transition-colors ml-3 shrink-0">
+                <button onclick="this.closest('#resultArea').classList.add('hidden')" class="text-teal-300/50 hover:text-white/80 transition-colors ml-3 shrink-0">
                     <span class="text-lg leading-none">&times;</span>
                 </button>
             </div>
