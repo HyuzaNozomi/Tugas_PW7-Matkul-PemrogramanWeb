@@ -7,16 +7,16 @@
     <link href="css/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+<body class="bg-gradient-to-br from-teal-950 via-teal-900 to-cyan-950 min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
 
-    <!-- Subtle grid overlay -->
-    <div class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:32px_32px] opacity-30"></div>
+    <!-- Subtle underwater light overlay -->
+    <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.10)_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
-    <!-- Decorative blurred elements -->
-    <div class="card-decor top-[-140px] left-[-100px] w-[400px] h-[400px] bg-gradient-to-br from-emerald-200/30 to-emerald-400/10 blur-3xl"></div>
-    <div class="card-decor bottom-[-200px] right-[-120px] w-[500px] h-[500px] bg-gradient-to-tl from-gray-300/25 to-white/10 blur-3xl"></div>
-    <div class="card-decor top-[15%] right-[-60px] w-[220px] h-[220px] bg-emerald-200/15 blur-2xl"></div>
-    <div class="card-decor bottom-[20%] left-[-40px] w-[180px] h-[180px] bg-white/30 blur-2xl"></div>
+    <!-- Decorative blurred underwater elements -->
+    <div class="card-decor top-[-140px] left-[-100px] w-[400px] h-[400px] bg-gradient-to-br from-teal-400/15 to-cyan-500/10 blur-3xl"></div>
+    <div class="card-decor bottom-[-200px] right-[-120px] w-[500px] h-[500px] bg-gradient-to-tl from-cyan-400/15 to-teal-500/10 blur-3xl"></div>
+    <div class="card-decor top-[15%] right-[-60px] w-[220px] h-[220px] bg-teal-300/10 blur-2xl"></div>
+    <div class="card-decor bottom-[20%] left-[-40px] w-[180px] h-[180px] bg-cyan-300/10 blur-2xl"></div>
 
     <!-- Main card -->
     <div class="w-full max-w-md relative z-10 animate-fade-up">
@@ -30,7 +30,7 @@
             <!-- Subtle top highlight -->
             <div class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent"></div>
 
-            <h2 class="text-2xl text-center text-gray-800 mb-7 tracking-tight min-h-[2.5rem]">
+            <h2 class="text-2xl text-center text-white/90 mb-7 tracking-tight min-h-[2.5rem]">
                 <span id="typewriter-text"></span><span id="typewriter-cursor"></span>
             </h2>
             
@@ -38,39 +38,39 @@
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token ?? '') ?>">
 
                 <div class="mb-5">
-                    <label class="block text-gray-500 font-semibold mb-2 text-xs tracking-widest uppercase">Nama Lengkap</label>
+                    <label class="block text-teal-200/80 font-semibold mb-2 text-xs tracking-widest uppercase">Nama Lengkap</label>
                     <div class="relative">
-                        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-teal-300/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                         </svg>
                         <input type="text" name="nama" id="nama" 
-                               class="input-field w-full pl-10 pr-4 py-3.5 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none transition-all duration-300"
+                               class="input-field w-full pl-10 pr-4 py-3.5 rounded-xl text-white placeholder-teal-300/50 focus:outline-none transition-all duration-300"
                                placeholder="Masukkan nama mahasiswa" required>
                     </div>
                     <p id="namaError" class="text-red-500 text-xs mt-1.5 hidden">Nama harus diisi</p>
                 </div>
 
                 <div class="mb-6">
-                    <label class="block text-gray-500 font-semibold mb-2 text-xs tracking-widest uppercase">Status Kehadiran</label>
+                    <label class="block text-teal-200/80 font-semibold mb-2 text-xs tracking-widest uppercase">Status Kehadiran</label>
                     <div class="relative">
-                        <svg class="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg class="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-teal-300/60 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
                         </svg>
                         <select name="status" id="status" 
-                                class="input-field w-full px-4 pr-10 py-3.5 rounded-xl text-gray-800 focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
+                                class="input-field w-full px-4 pr-10 py-3.5 rounded-xl text-white focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
                                 required>
-                            <option value="" class="bg-white text-gray-400">Pilih status</option>
-                            <option value="Hadir" class="bg-white text-gray-800">Hadir</option>
-                            <option value="Izin" class="bg-white text-gray-800">Izin</option>
-                            <option value="Sakit" class="bg-white text-gray-800">Sakit</option>
-                            <option value="Tidak Hadir" class="bg-white text-gray-800">Tidak Hadir</option>
+                            <option value="" class="bg-teal-900 text-teal-300/50">Pilih status</option>
+                            <option value="Hadir" class="bg-teal-900 text-white">Hadir</option>
+                            <option value="Izin" class="bg-teal-900 text-white">Izin</option>
+                            <option value="Sakit" class="bg-teal-900 text-white">Sakit</option>
+                            <option value="Tidak Hadir" class="bg-teal-900 text-white">Tidak Hadir</option>
                         </select>
                     </div>
                     <p id="statusError" class="text-red-500 text-xs mt-1.5 hidden">Pilih status</p>
                 </div>
 
                 <button type="submit" name="submit" 
-                        class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-200/50 hover:shadow-emerald-300/50 transition-all duration-300 active:scale-[0.98]">
+                        class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-teal-950/50 hover:shadow-teal-900/50 transition-all duration-300 active:scale-[0.98]">
                     Submit
                 </button>
             </form>
